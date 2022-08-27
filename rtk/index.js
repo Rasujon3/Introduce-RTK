@@ -3,6 +3,7 @@ const { counterActions } = require("./features/counter/counterSlice");
 const {
   dynamicCounterActions,
 } = require("./features/dynamicCounter/dynamicCounterSlice");
+const { fetchPosts } = require("./features/post/postSlice");
 
 // initial state
 // console.log(store.getState());
@@ -13,7 +14,7 @@ store.subscribe(() => {
 });
 
 // disptach actions
-store.dispatch(counterActions.increment());
+store.dispatch(fetchPosts());
 
 // store.dispatch(counterActions.increment());
 
